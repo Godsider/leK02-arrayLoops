@@ -36,6 +36,7 @@ var arrays = [
 ]
 
 var resultStr = ''
+var none = 'unavailable'
 
 // checking a value to not to be NaN/undefined/null
 var isNumber = function(value) {
@@ -43,7 +44,7 @@ var isNumber = function(value) {
 }
 
 for (i = 0; i < arrays.length; i++) { // this loop iterates through arrays
-  var maxNumber = minNumber = null, numsSum = j = 0, elemNow
+  var numsSum = maxNumber = minNumber = none, j = 0, elemNow
   resultStr += '\nArray ' + i + ': ' + strings[i]
   arrayNow = arrays[i]
   arrayLength = arrayNow.length
@@ -62,10 +63,10 @@ for (i = 0; i < arrays.length; i++) { // this loop iterates through arrays
   do { // this loop iterates through the specific array being processed right now
             console.log(j)
     elemNow = arrayNow[j]
-    if (isNumber(elemNow)) { // if elemNow is not NaN/undefined/null
-      maxNumber = (maxNumber === null) || (elemNow > maxNumber) ? elemNow : maxNumber
-      minNumber = (minNumber === null) || (elemNow < minNumber) ? elemNow : minNumber
-      numsSum += elemNow
+    if (isNumber(elemNow)) { // if the current element isn't NaN/undefined/null -- init vars or process the value
+      maxNumber = (maxNumber === none) || (elemNow > maxNumber) ? elemNow : maxNumber
+      minNumber = (minNumber === none) || (elemNow < minNumber) ? elemNow : minNumber
+      numsSum = numsSum === none ? elemNow : numsSum + elemNow
     }
     j++
   } while (j < arrayLength)
