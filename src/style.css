@@ -15,12 +15,7 @@ body {
   background: white;
 }
 
-#task {
-  border-top: 2px dotted #d4d4d4;
-  width: auto;
-}
-
-#result {
+#task, #result {
   border-top: 2px dotted #d4d4d4;
   width: auto;
 }
