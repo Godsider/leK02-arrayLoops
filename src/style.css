@@ -1,0 +1,28 @@
+body {
+  background: #d4d4d4;
+  /*text-align: center;*/
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+#container {
+  margin: 0 auto;
+  display: inline-block;
+  width: auto;
+  padding: 50px;
+  text-align: left;
+  background: white;
+}
+
+#task {
+  border-top: 2px dotted #d4d4d4;
+  width: auto;
+}
+
+#result {
+  border-top: 2px dotted #d4d4d4;
+  width: auto;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+$page-background: #d4d4d4;
+$divider-color: $page-background;
+$menu-background: white;
+
+body {
+  background: $page-background;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+#container {
+  //margin: 0 auto;
+  margin: 50px auto;
+  display: inline-block;
+  width: auto;
+  padding: 50px;
+  text-align: left;
+  background: $menu-background;
+}
+
+#task {
+  border-top: 2px dotted $divider-color;
+  width: auto;
+  //text-align: left;
+}
+
+//#task::before {
+  //content: 'The task'
+//}
+
+#result {
+  border-top: 2px dotted $divider-color;
+  width: auto;
+  //text-align: left;
+}
+
+//#result::before {
+  //content: 'The result'
+  //border-bottom: 2px solid #d4d4d4;
+//}
+
