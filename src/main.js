@@ -1,7 +1,7 @@
 /*
  * lektorium course: Java Script
  * lesson #2 homework: arrays processing in loops
- * 
+ *
  * made by Vitaliy Dovgan
  */
 
@@ -11,7 +11,6 @@ const strings = [
   '[1, 7, 3]',
   '[1, undefined, 3, 5, -3]',
   '[1, NaN, 3, 5, -3]',
-  
   '[NaN, undefined, 1, -7, null, 6]',
   '[null, 1000, Infinity, 3000]',
   '[ ]'
@@ -19,24 +18,25 @@ const strings = [
 
 // representing arrays as a two-dimensional array
 const arrays = [
-  [3, 0, -5, 1, 44, -12, 3, 0, 0, 1, 2, -3, -3, 2, 1, 4, -2-3-1],
+  [3, 0, -5, 1, 44, -12, 3, 0, 0, 1, 2, -3, -3, 2, 1, 4, -2 - 3 - 1],
   [-1, -8, -2],
   [1, 7, 3],
   [1, undefined, 3, 5, -3],
   [1, NaN, 3, 5, -3],
-  
   [NaN, undefined, 1, -7, null, 6],
   [null, 1000, Infinity, 3000],
   []
 ]
 
 // performing the processing
-const process = function() {
+const process = function () {
   var resultStr = '<h3>The result:</h3>'
   const none = 'none'
 
-  for (i = 0; i < arrays.length; i++) { // this loop iterates through arrays
-    var numsSum = maxNumber = minNumber = none, j = 0, elemNow
+  for (let i = 0; i < arrays.length; i++) { // this loop iterates through arrays
+    var j = 0
+    var numsSum, maxNumber, minNumber, elemNow
+    numsSum = maxNumber = minNumber = none
     resultStr += 'Array ' + i + ': ' + strings[i]
 
     do { // this loop iterates through the specific array being processed right now
@@ -58,4 +58,4 @@ const process = function() {
 }
 
 // injecting the result into the document
-document.getElementById("result").innerHTML = process()
+document.getElementById('result').innerHTML = process()
